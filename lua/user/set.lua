@@ -1,5 +1,3 @@
-vim.opt.guicursor = ""
-
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -29,3 +27,10 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
+
+-- Call a function in colors.lua after PackerSync
+vim.cmd([[autocmd User PackerSyncDone lua require('colors').ColorMyPencils()]])
+vim.g.netrw_browse_split = 0
+vim.g.netrw_banner = 0
+vim.g.netrw_winsize = 25
+vim.wo.number = true
