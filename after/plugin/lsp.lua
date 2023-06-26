@@ -3,10 +3,22 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-  'rust_analyzer',
-  'lua_ls',
-  'html',
- })
+	'rust_analyzer', 'lua_ls', 'html',
+	'stylua', 'html', 'htmlbeautifier',
+	'markdownlint','cucumber_language_server',
+	'cssls', 'jsonls', 'dockerls',
+	'eslint', '','opencl_ls', 'cmake',
+	'cmakelang2', 'java_language_server',
+	'jdlts', 'omnisharp', 'csharpier', 'powershell_es', 
+	'cmake', 'cmakelang', 'sqlls', 
+	'sql-formatter', 'stylelint_lsp', 
+	'tsserver', 'ts-standard', 'yamlls', 
+	'yamlfix', 'prettier', 'xmlformatter', 
+	'graphql-language-service-cli', 
+	'java-debug-adapter', 'js-debug-adapter',
+	'debugpy', 'dart-debug-adapter', 'chrome-debug-adapter', 
+	'bash-debug-adapter', 'netcoredbg', 'cpptools',
+})
 
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()
