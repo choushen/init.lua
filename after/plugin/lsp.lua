@@ -13,7 +13,7 @@ lsp.ensure_installed({
 	'eslint',
 	'opencl_ls',
 	'cmake',
-	'java_language_server',
+	'jdtls',
 	'omnisharp',
 	'cmake',
 	'sqlls',
