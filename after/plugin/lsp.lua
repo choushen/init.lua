@@ -19,6 +19,11 @@ lsp.ensure_installed({
 	'sqlls',
 	'tsserver',
 	'yamlls',
+	'vimls',
+	'pylsp',
+	'tailwindcss',
+	'sqlls',
+	'java_language_server',
 })
 
 -- Fix Undefined global 'vim'
