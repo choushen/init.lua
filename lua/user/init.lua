@@ -1,8 +1,9 @@
-print("lua/init.lua - success")
 
 require("user.remap")
-require("user.set")
 require("user.packer")
+require("user.set")
+
+print("lua/init.lua - success")
 
 
 
