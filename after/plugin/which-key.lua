@@ -204,11 +204,11 @@ local mappings = {
       name = "Mason",
       m = { ":Mason<CR>", "Run Mason" },
     },
-    e = {
-      name = "NeoTree",
-      ["<leader>"] = { ":NeoTreeFindFile<CR>", "Find file" },
-      ["<leader>E"] = { ":NeoTreeToggle<CR>", "Toggle NeoTree" },
-    },
+    -- e = {
+    --   name = "NvimTree",
+    --   ["<leader>"] = { ":NvimTreeFindFile<CR>", "Find file" },
+    --   ["<leader>e"] = { ":NvimTreeToggle<CR>", "Toggle NeoTree" },
+    -- },
     f = {
       name = "Flit",
       f = { ":<C-u>Flit<CR>", "Flit forward" },

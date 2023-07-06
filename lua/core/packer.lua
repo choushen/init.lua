@@ -8,6 +8,14 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    -- Mason LSP
+    use {
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
+      "neovim/nvim-lspconfig",
+  }
+
+
     -- Telescope
     use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -25,9 +33,15 @@ return require('packer').startup(function(use)
     -- Copilot
     use("github/copilot.vim")
 
-    -- Web Dev Icons
+    -- Nvim-Tree Web Dev Icons
     -- Use specific branch, dependency and run lua file after load
     use 'nvim-tree/nvim-web-devicons'
+
+    -- Nvim-Tree
+    use ("nvim-tree/nvim-tree.lua")
+
+    -- Lua Line
+    use("nvim-lualine/lualine.nvim")
 
     -- which-key
     use {
@@ -47,15 +61,15 @@ return require('packer').startup(function(use)
     use ("MunifTanjim/nui.nvim")
 
     -- Neotree
-    use {
-      "nvim-neo-tree/neo-tree.nvim",
-        branch = "v2.x",
-        requires = { 
-          "nvim-lua/plenary.nvim",
-          "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-          "MunifTanjim/nui.nvim",
-        }
-      }
+    -- use {
+    --   "nvim-neo-tree/neo-tree.nvim",
+    --     branch = "v2.x",
+    --     requires = { 
+    --       "nvim-lua/plenary.nvim",
+    --       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+    --       "MunifTanjim/nui.nvim",
+    --     }
+    --   }
 
     -- Bufferline
     use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
