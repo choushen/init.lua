@@ -15,6 +15,14 @@ return require('packer').startup(function(use)
       "neovim/nvim-lspconfig",
   }
 
+  -- LSP Lines
+  use({
+    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+    config = function()
+      require("lsp_lines").setup()
+    end,
+  })
+
 
     -- Telescope
     use {
@@ -73,6 +81,23 @@ return require('packer').startup(function(use)
 
     -- Bufferline
     use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+
+    -- Undotree (Undo History)
+    use("mbbill/undotree")
+
+    -- Fugitive (Git)
+    use("tpope/vim-fugitive")
+
+-- Trouble (LSP Diagnostics)
+  use {
+  "folke/trouble.nvim",
+  requires = { "nvim-tree/nvim-web-devicons" },
+  opts = {
+   -- your configuration comes here
+   -- or leave it empty to use the default settings
+   -- refer to the configuration section below
+  },
+ }
 
   -- Theme
   use({

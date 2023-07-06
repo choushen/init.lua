@@ -159,6 +159,12 @@ vim.api.nvim_set_keymap('n', '<leader>uC', '<cmd>Telescope colorscheme<cr>', { n
 vim.api.nvim_set_keymap('n', '<leader>ss', '<cmd>Telescope lsp_document_symbols<cr>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>sS', '<cmd>Telescope lsp_workspace_symbols<cr>', { noremap = true, silent = true })
 
+-- fugitive
+vim.keymap.set("n", "<leader>GS", vim.cmd.Git)
+
+-- undotree
+vim.keymap.set("n", "<leader>UT", vim.cmd.UndotreeToggle)
+
 -- todo-comments.nvim
 vim.api.nvim_set_keymap('n', ']t', '<cmd>TodoTelescope next<cr>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '[t', '<cmd>TodoTelescope prev<cr>', { noremap = true, silent = true })
@@ -168,12 +174,24 @@ vim.api.nvim_set_keymap('n', '<leader>st', '<cmd>TodoTelescope<cr>', { noremap =
 vim.api.nvim_set_keymap('n', '<leader>sT', '<cmd>TodoTelescope<cr>', { noremap = true, silent = true })
 
 -- trouble.nvim
-vim.api.nvim_set_keymap('n', '<leader>xx', '<cmd>TroubleToggle lsp_document_diagnostics<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>xX', '<cmd>TroubleToggle lsp_workspace_diagnostics<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>xL', '<cmd>TroubleToggle loclist<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>xQ', '<cmd>TroubleToggle quickfix<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '[q', '<cmd>TroublePrevious<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', ']q', '<cmd>TroubleNext<cr>', { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
+  {silent = true, noremap = true}
+)
+vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>",
+  {silent = true, noremap = true}
+)
+vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>",
+  {silent = true, noremap = true}
+)
+vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>",
+  {silent = true, noremap = true}
+)
+vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
+  {silent = true, noremap = true}
+)
+vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
+  {silent = true, noremap = true}
+)
 
 -- vim-illuminate
 vim.api.nvim_set_keymap('n', ']]', '<cmd>IlluminateNext<cr>', { noremap = true, silent = true })

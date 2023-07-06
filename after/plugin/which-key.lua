@@ -196,6 +196,8 @@ local mappings = {
     -- ["ue"] = { "<cmd>lua require('lazyvim.plugins.extras.ui.edgy').toggle()<cr>", "Toggle Edgy" },
     -- ["uE"] = { "<cmd>lua require('lazyvim.plugins.extras.ui.edgy').select_window()<cr>", "Select Edgy window" },
     -- ["fp"] = { "<cmd>lua require('lazyvim.plugins.extras.util.project').projects()<cr>", "Open project list" },
+    ["<leader>GS"] = {vim.cmd.Git, "Git"},
+    ["<leader>UT"] = {vim.cmd.UndotreeToggle, "Undotree"},
     b = {
       name = "Bufferline",
       p = { ":BufferLinePick<CR>", "Pick buffer" },
@@ -252,6 +254,15 @@ local mappings = {
       name = "Mini",
       d = { ":Bdelete<CR>", "Delete buffer" },
       D = { ":Bdelete!<CR>", "Force delete buffer" },
+    },
+    x = {
+      name = "Trouble",
+      x = { "<cmd>TroubleToggle<cr>", "Toggle" },
+      w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "Workspace Diagnostics" },
+      d = { "<cmd>TroubleToggle document_diagnostics<cr>", "Document Diagnostics" },
+      l = { "<cmd>TroubleToggle loclist<cr>", "Loclist" },
+      q = { "<cmd>TroubleToggle quickfix<cr>", "Quickfix" },
+      R = { "<cmd>TroubleToggle lsp_references<cr>", "LSP References" },
     },
     z = {
       name = "MiniSurround",
