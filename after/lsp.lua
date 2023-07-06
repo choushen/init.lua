@@ -1,1 +1,3 @@
-vim.api.nvim_set_keymap('n', '<leader>cm', ':Mason<CR>', { noremap = true, silent = true })
+require("mason-lspconfig").setup {
+    ensure_installed = { "lua_ls", "rust_analyzer" },
+}
