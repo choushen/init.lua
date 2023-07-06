@@ -1,0 +1,2 @@
+vim.api.nvim_set_keymap('n', '<leader>bp', ':BufferLinePick<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>bP', ':BufferLineCloseBuffersRight<CR>', { noremap = true, silent = true })

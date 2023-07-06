@@ -1,0 +1,6 @@
+vim.api.nvim_set_keymap('n', '<leader>xx', '<cmd>TroubleToggle lsp_document_diagnostics<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>xX', '<cmd>TroubleToggle lsp_workspace_diagnostics<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>xL', '<cmd>TroubleToggle loclist<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>xQ', '<cmd>TroubleToggle quickfix<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '[q', '<cmd>TroublePrevious<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', ']q', '<cmd>TroubleNext<cr>', { noremap = true, silent = true })

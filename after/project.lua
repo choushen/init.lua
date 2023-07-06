@@ -1,0 +1,1 @@
+vim.api.nvim_set_keymap('n', '<leader>fp', '<cmd>lua require("lazyvim.plugins.extras.util.project").projects()<cr>', { noremap = true, silent = true })

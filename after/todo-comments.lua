@@ -1,0 +1,6 @@
+vim.api.nvim_set_keymap('n', ']t', '<cmd>TodoTelescope next<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '[t', '<cmd>TodoTelescope prev<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>xt', '<cmd>Trouble todo<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>xT', '<cmd>Trouble todo<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>st', '<cmd>TodoTelescope<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>sT', '<cmd>TodoTelescope<cr>', { noremap = true, silent = true })

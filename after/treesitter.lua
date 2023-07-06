@@ -1,0 +1,2 @@
+vim.api.nvim_set_keymap('n', '<C-Space>', ':lua require("nvim-treesitter.selectors").increment_selection()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('x', '<BS>', ':lua require("nvim-treesitter.selectors").decrement_selection()<CR>', { noremap = true, silent = true })

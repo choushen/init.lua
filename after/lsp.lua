@@ -1,0 +1,1 @@
+vim.api.nvim_set_keymap('n', '<leader>cm', ':Mason<CR>', { noremap = true, silent = true })
