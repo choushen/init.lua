@@ -63,6 +63,7 @@ local mappings = {
     ["<leader><tab>]"] = "Next tab",
     ["<leader><tab>d"] = "Close tab",
     ["<leader><tab>["] = "Previous tab",
+    ["<leader>e"] = { ":NvimTreeToggle<CR>", "Toggle NvimTree" },
     -- ["bp"] = { "<cmd>BufferLinePick<cr>", "Pick buffer from list" },
     -- ["bP"] = { "<cmd>BufferLineCloseBuffersRight<cr>", "Close all buffers to the right" },
     -- ["f"] = { "<cmd>Flit<cr>", "Find text" },
@@ -207,7 +208,7 @@ local mappings = {
     -- e = {
     --   name = "NvimTree",
     --   ["<leader>"] = { ":NvimTreeFindFile<CR>", "Find file" },
-    --   ["<leader>e"] = { ":NvimTreeToggle<CR>", "Toggle NeoTree" },
+    --   ["<leader>e"] = { ":NvimTreeToggle<CR>", "Toggle NvimTree" },
     -- },
     f = {
       name = "Flit",
