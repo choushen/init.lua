@@ -1,9 +1,9 @@
 -- Load all the core files
 require("core.keymaps")
 
-require("core.packer")
-
 require("core.set")
+
+require("core.packer")
 
 -- Success check
 print("lua/init.lua - success")
