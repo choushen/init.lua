@@ -96,7 +96,7 @@ vim.api.nvim_set_keymap('n', 'gzn', ':<C-u>MiniSurroundUpdateConfig<CR>', { nore
 -- neo-tree.nvim
 vim.api.nvim_set_keymap('n', '<leader>fe', ':NeoTreeFindFile<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>fE', ':NeoTreeFindFile<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>e', ':NeoTreeToggle<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>e', ':NeoTreeShow<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>E', ':NeoTreeToggle<CR>', { noremap = true, silent = true })
 
 -- noice.nvim
