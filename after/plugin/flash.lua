@@ -1,8 +1,0 @@
-vim.api.nvim_set_keymap('n', 's', '<cmd>lua require("flash").flash()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'S', '<cmd>lua require("flash").flash_ts()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('o', 's', '<cmd>lua require("flash").flash()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('o', 'S', '<cmd>lua require("flash").flash_ts()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('x', 's', '<cmd>lua require("flash").flash()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('x', 'S', '<cmd>lua require("flash").flash_ts()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('o', 's', '<cmd>lua require("flash").flash()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('o', 'S', '<cmd>lua require("flash").flash_ts()<cr>', { noremap = true, silent = true })

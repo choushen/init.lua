@@ -1,2 +1,0 @@
-vim.api.nvim_set_keymap('n', '<leader>du', '<cmd>lua require("dapui").toggle()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>de', '<cmd>lua require("dapui").eval()<cr>', { noremap = true, silent = true })

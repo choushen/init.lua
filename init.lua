@@ -1,8 +1,2 @@
 require('core')
 
-
-tehcniusaondinas thatas
-
-
-
-

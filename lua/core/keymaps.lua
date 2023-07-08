@@ -27,7 +27,7 @@ vim.api.nvim_set_keymap('n', 'n', 'nzzzv', { noremap = true })
 vim.api.nvim_set_keymap('n', 'N', 'Nzzzv', { noremap = true })
 vim.api.nvim_set_keymap('i', '<C-s>', '<C-o>:w<CR>', { noremap = true })
 vim.api.nvim_set_keymap('v', '<C-s>', ':w<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>l', ':LazyGit<CR>', { noremap = true })
+-- vim.api.nvim_set_keymap('n', '<leader>l', ':LazyGit<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>fn', ':enew<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>xl', ':lopen<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>xq', ':copen<CR>', { noremap = true })
@@ -38,8 +38,8 @@ vim.api.nvim_set_keymap('n', '<leader>ul', ':set number!<CR>', { noremap = true 
 vim.api.nvim_set_keymap('n', '<leader>ud', ':lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>uc', ':set conceallevel=2<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>uh', ':lua vim.lsp.buf.incoming_calls()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>gg', ':LazyGit<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>gG', ':LazyGit<CR>', { noremap = true })
+-- vim.api.nvim_set_keymap('n', '<leader>gg', ':LazyGit<CR>', { noremap = true })
+-- vim.api.nvim_set_keymap('n', '<leader>gG', ':LazyGit<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>qq', ':qa!<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>ui', ':lua print(vim.inspect(vim.api.nvim_win_get_cursor(0)))<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>ft', ':terminal<CR>', { noremap = true })
@@ -66,65 +66,51 @@ vim.api.nvim_set_keymap('n', '<leader>bp', ':BufferLinePick<CR>', { noremap = tr
 vim.api.nvim_set_keymap('n', '<leader>bP', ':BufferLineCloseBuffersRight<CR>', { noremap = true, silent = true })
 
 -- flit.nvim
-vim.api.nvim_set_keymap('n', 'f', ':<C-u>Flit<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'F', ':<C-u>Flit!<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 't', ':<C-u>FlitTab<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'T', ':<C-u>FlitTab!<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', 'f', ':<C-u>Flit<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', 'F', ':<C-u>Flit!<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', 't', ':<C-u>FlitTab<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', 'T', ':<C-u>FlitTab!<CR>', { noremap = true, silent = true })
 
 -- leap.nvim
-vim.api.nvim_set_keymap('n', 's', ':Leap<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'S', ':LeapBack<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'gs', ':LeapFromWindows<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', 's', ':Leap<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', 'S', ':LeapBack<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', 'gs', ':LeapFromWindows<CR>', { noremap = true, silent = true })
 
 -- mason.nvim
 vim.api.nvim_set_keymap('n', '<leader>cm', ':Mason<CR>', { noremap = true, silent = true })
 
--- mini.bufremove
-vim.api.nvim_set_keymap('n', '<leader>bd', ':Bdelete<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>bD', ':Bdelete!<CR>', { noremap = true, silent = true })
-
--- mini.surround
-vim.api.nvim_set_keymap('n', 'gza', ':<C-u>MiniSurroundAdd<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', 'gza', ':<C-u>MiniSurroundAdd<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'gzd', ':<C-u>MiniSurroundDelete<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'gzf', ':<C-u>MiniSurroundFindRight<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'gzF', ':<C-u>MiniSurroundFindLeft<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'gzh', ':<C-u>MiniSurroundHighlight<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'gzr', ':<C-u>MiniSurroundReplace<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'gzn', ':<C-u>MiniSurroundUpdateConfig<CR>', { noremap = true, silent = true })
-
 -- neo-tree.nvim
-vim.api.nvim_set_keymap('n', '<leader>fe', ':NvimTreeFindFile<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>fE', ':NvimTreeFindFile<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>E', ':NvimTreeFindFileToggle<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>fe', ':NvimTreeFindFile<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>fE', ':NvimTreeFindFile<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>E', ':NvimTreeFindFileToggle<CR>', { noremap = true, silent = true })
 
 -- noice.nvim
-vim.api.nvim_set_keymap('c', '<S-Enter>', ':NoiceRedirectCmdline<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>snl', ':NoiceLast<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>snh', ':NoiceHistory<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>sna', ':NoiceAll<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>snd', ':NoiceDismissAll<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', '<C-f>', '<C-f>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-f>', '<C-f>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('s', '<C-f>', '<C-f>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-b>', '<C-b>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('s', '<C-b>', '<C-b>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('c', '<S-Enter>', ':NoiceRedirectCmdline<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>snl', ':NoiceLast<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>snh', ':NoiceHistory<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>sna', ':NoiceAll<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>snd', ':NoiceDismissAll<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('i', '<C-f>', '<C-f>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<C-f>', '<C-f>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('s', '<C-f>', '<C-f>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<C-b>', '<C-b>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('s', '<C-b>', '<C-b>', { noremap = true, silent = true })
 
 -- nvim-notify
-vim.api.nvim_set_keymap('n', '<leader>un', ':NotifyClear<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>un', ':NotifyClear<CR>', { noremap = true, silent = true })
 
--- nvim-spectre
-vim.api.nvim_set_keymap('n', '<leader>sr', ':lua require("spectre").open()<CR>', { noremap = true, silent = true })
+-- -- nvim-spectre
+-- vim.api.nvim_set_keymap('n', '<leader>sr', ':lua require("spectre").open()<CR>', { noremap = true, silent = true })
 
 -- nvim-treesitter
 vim.api.nvim_set_keymap('n', '<C-Space>', ':lua require("nvim-treesitter.selectors").increment_selection()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('x', '<BS>', ':lua require("nvim-treesitter.selectors").decrement_selection()<CR>', { noremap = true, silent = true })
 
 -- persistence.nvim
-vim.api.nvim_set_keymap('n', '<leader>qs', ':lua require("persistence").load()<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>ql', ':lua require("persistence").load_last()<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>qd', ':lua require("persistence").stop()<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>qs', ':lua require("persistence").load()<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>ql', ':lua require("persistence").load_last()<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>qd', ':lua require("persistence").stop()<CR>', { noremap = true, silent = true })
 
 -- telescope.nvim
 vim.api.nvim_set_keymap('n', '<leader>,', '<cmd>Telescope buffers<cr>', { noremap = true, silent = true })
@@ -194,84 +180,105 @@ vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
 )
 
 -- vim-illuminate
-vim.api.nvim_set_keymap('n', ']]', '<cmd>IlluminateNext<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '[[', '<cmd>IlluminatePrev<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', ']]', '<cmd>IlluminateNext<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '[[', '<cmd>IlluminatePrev<cr>', { noremap = true, silent = true })
 
--- yanky.nvim
-vim.api.nvim_set_keymap('n', '<leader>p', '<cmd>lua require("yanky").open()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'y', 'y', { noremap = true })
-vim.api.nvim_set_keymap('n', 'p', 'p', { noremap = true })
-vim.api.nvim_set_keymap('n', 'P', 'P', { noremap = true })
-vim.api.nvim_set_keymap('n', 'gp', '<cmd>lua require("yanky").paste_after()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'gP', '<cmd>lua require("yanky").paste_before()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '[y', '<cmd>lua require("yanky").cycle(-1)<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', ']y', '<cmd>lua require("yanky").cycle(1)<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', ']p', '<cmd>lua require("yanky").paste_after(true)<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '[p', '<cmd>lua require("yanky").paste_before(true)<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', ']P', '<cmd>lua require("yanky").paste_after(true, true)<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '[P', '<cmd>lua require("yanky").paste_before(true, true)<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '>p', '<cmd>lua require("yanky").indent_right()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<p', '<cmd>lua require("yanky").indent_left()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '>P', '<cmd>lua require("yanky").indent_right(true)<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<P', '<cmd>lua require("yanky").indent_left(true)<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '=p', '<cmd>lua require("yanky").filter()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '=P', '<cmd>lua require("yanky").filter(true)<cr>', { noremap = true, silent = true })
+-- -- yanky.nvim
+-- vim.api.nvim_set_keymap('n', '<leader>p', '<cmd>lua require("yanky").open()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', 'y', 'y', { noremap = true })
+-- vim.api.nvim_set_keymap('n', 'p', 'p', { noremap = true })
+-- vim.api.nvim_set_keymap('n', 'P', 'P', { noremap = true })
+-- vim.api.nvim_set_keymap('n', 'gp', '<cmd>lua require("yanky").paste_after()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', 'gP', '<cmd>lua require("yanky").paste_before()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '[y', '<cmd>lua require("yanky").cycle(-1)<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', ']y', '<cmd>lua require("yanky").cycle(1)<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', ']p', '<cmd>lua require("yanky").paste_after(true)<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '[p', '<cmd>lua require("yanky").paste_before(true)<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', ']P', '<cmd>lua require("yanky").paste_after(true, true)<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '[P', '<cmd>lua require("yanky").paste_before(true, true)<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '>p', '<cmd>lua require("yanky").indent_right()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<p', '<cmd>lua require("yanky").indent_left()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '>P', '<cmd>lua require("yanky").indent_right(true)<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<P', '<cmd>lua require("yanky").indent_left(true)<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '=p', '<cmd>lua require("yanky").filter()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '=P', '<cmd>lua require("yanky").filter(true)<cr>', { noremap = true, silent = true })
 
--- nvim-dap
-vim.api.nvim_set_keymap('n', '<leader>dB', '<cmd>lua require("dap").set_breakpoint(nil, nil, vim.fn.input("Breakpoint condition: "))<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>db', '<cmd>lua require("dap").toggle_breakpoint()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>dc', '<cmd>lua require("dap").continue()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>dC', '<cmd>lua require("dap").run_to_cursor()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>dg', '<cmd>lua require("dap").repl.open()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>di', '<cmd>lua require("dap").step_into()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>dj', '<cmd>lua require("dap").down()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>dk', '<cmd>lua require("dap").up()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>dl', '<cmd>lua require("dap").run_last()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>do', '<cmd>lua require("dap").step_out()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>dO', '<cmd>lua require("dap").step_over()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>dp', '<cmd>lua require("dap").pause()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>dr', '<cmd>lua require("dapui").toggle()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>ds', '<cmd>lua require("dap").repl.run_last()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>dt', '<cmd>lua require("dap").disconnect()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>dw', '<cmd>lua require("dapui").widgets()<cr>', { noremap = true, silent = true })
+-- -- nvim-dap
+-- vim.api.nvim_set_keymap('n', '<leader>dB', '<cmd>lua require("dap").set_breakpoint(nil, nil, vim.fn.input("Breakpoint condition: "))<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>db', '<cmd>lua require("dap").toggle_breakpoint()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>dc', '<cmd>lua require("dap").continue()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>dC', '<cmd>lua require("dap").run_to_cursor()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>dg', '<cmd>lua require("dap").repl.open()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>di', '<cmd>lua require("dap").step_into()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>dj', '<cmd>lua require("dap").down()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>dk', '<cmd>lua require("dap").up()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>dl', '<cmd>lua require("dap").run_last()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>do', '<cmd>lua require("dap").step_out()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>dO', '<cmd>lua require("dap").step_over()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>dp', '<cmd>lua require("dap").pause()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>dr', '<cmd>lua require("dapui").toggle()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>ds', '<cmd>lua require("dap").repl.run_last()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>dt', '<cmd>lua require("dap").disconnect()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>dw', '<cmd>lua require("dapui").widgets()<cr>', { noremap = true, silent = true })
 
--- nvim-dap-ui
-vim.api.nvim_set_keymap('n', '<leader>du', '<cmd>lua require("dapui").toggle()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>de', '<cmd>lua require("dapui").eval()<cr>', { noremap = true, silent = true })
+-- -- nvim-dap-ui
+-- vim.api.nvim_set_keymap('n', '<leader>du', '<cmd>lua require("dapui").toggle()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>de', '<cmd>lua require("dapui").eval()<cr>', { noremap = true, silent = true })
 
--- one-small-step-for-vimkind
-vim.api.nvim_set_keymap('n', '<leader>daL', '<cmd>lua require("ossv.nlua").start()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>dal', '<cmd>lua require("ossv.nlua").start()<cr>', { noremap = true, silent = true })
+-- -- one-small-step-for-vimkind
+-- vim.api.nvim_set_keymap('n', '<leader>daL', '<cmd>lua require("ossv.nlua").start()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>dal', '<cmd>lua require("ossv.nlua").start()<cr>', { noremap = true, silent = true })
 
 -- flash.nvim
-vim.api.nvim_set_keymap('n', 's', '<cmd>lua require("flash").flash()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'S', '<cmd>lua require("flash").flash_ts()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('o', 's', '<cmd>lua require("flash").flash()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('o', 'S', '<cmd>lua require("flash").flash_ts()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('x', 's', '<cmd>lua require("flash").flash()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('x', 'S', '<cmd>lua require("flash").flash_ts()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('o', 's', '<cmd>lua require("flash").flash()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('o', 'S', '<cmd>lua require("flash").flash_ts()<cr>', { noremap = true, silent = true })
-
--- mini.files
-vim.api.nvim_set_keymap('n', '<leader>fm', '<cmd>lua require("lazyvim.plugins.extras.editor.mini-files").open_mini_files("current")<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>fM', '<cmd>lua require("lazyvim.plugins.extras.editor.mini-files").open_mini_files("cwd")<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', 's', '<cmd>lua require("flash").flash()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', 'S', '<cmd>lua require("flash").flash_ts()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('o', 's', '<cmd>lua require("flash").flash()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('o', 'S', '<cmd>lua require("flash").flash_ts()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('x', 's', '<cmd>lua require("flash").flash()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('x', 'S', '<cmd>lua require("flash").flash_ts()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('o', 's', '<cmd>lua require("flash").flash()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('o', 'S', '<cmd>lua require("flash").flash_ts()<cr>', { noremap = true, silent = true })
 
 -- neotest
-vim.api.nvim_set_keymap('n', '<leader>tt', '<cmd>lua require("lazyvim.plugins.extras.test.core").run_file()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>tT', '<cmd>lua require("lazyvim.plugins.extras.test.core").run_all_test_files()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>tr', '<cmd>lua require("lazyvim.plugins.extras.test.core").run_nearest()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>ts', '<cmd>lua require("lazyvim.plugins.extras.test.core").toggle_summary()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>to', '<cmd>lua require("lazyvim.plugins.extras.test.core").show_output()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>tO', '<cmd>lua require("lazyvim.plugins.extras.test.core").toggle_output_panel()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>tS', '<cmd>lua require("lazyvim.plugins.extras.test.core").stop()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>tt', '<cmd>lua require("lazyvim.plugins.extras.test.core").run_file()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>tT', '<cmd>lua require("lazyvim.plugins.extras.test.core").run_all_test_files()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>tr', '<cmd>lua require("lazyvim.plugins.extras.test.core").run_nearest()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>ts', '<cmd>lua require("lazyvim.plugins.extras.test.core").toggle_summary()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>to', '<cmd>lua require("lazyvim.plugins.extras.test.core").show_output()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>tO', '<cmd>lua require("lazyvim.plugins.extras.test.core").toggle_output_panel()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>tS', '<cmd>lua require("lazyvim.plugins.extras.test.core").stop()<cr>', { noremap = true, silent = true })
 
 -- nvim-dap
-vim.api.nvim_set_keymap('n', '<leader>td', '<cmd>lua require("lazyvim.plugins.extras.edtest.core").debug_nearest()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>td', '<cmd>lua require("lazyvim.plugins.extras.edtest.core").debug_nearest()<cr>', { noremap = true, silent = true })
 
--- edgy.nvim
-vim.api.nvim_set_keymap('n', '<leader>ue', '<cmd>lua require("lazyvim.plugins.extras.ui.edgy").toggle()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>uE', '<cmd>lua require("lazyvim.plugins.extras.ui.edgy").select_window()<cr>', { noremap = true, silent = true })
+-- -- edgy.nvim
+-- vim.api.nvim_set_keymap('n', '<leader>ue', '<cmd>lua require("lazyvim.plugins.extras.ui.edgy").toggle()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>uE', '<cmd>lua require("lazyvim.plugins.extras.ui.edgy").select_window()<cr>', { noremap = true, silent = true })
 
--- project.nvim
-vim.api.nvim_set_keymap('n', '<leader>fp', '<cmd>lua require("lazyvim.plugins.extras.util.project").projects()<cr>', { noremap = true, silent = true })
+-- -- project.nvim
+-- vim.api.nvim_set_keymap('n', '<leader>fp', '<cmd>lua require("lazyvim.plugins.extras.util.project").projects()<cr>', { noremap = true, silent = true })
+
+-- mini.surround
+-- vim.api.nvim_set_keymap('n', 'gza', ':<C-u>MiniSurroundAdd<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('v', 'gza', ':<C-u>MiniSurroundAdd<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', 'gzd', ':<C-u>MiniSurroundDelete<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', 'gzf', ':<C-u>MiniSurroundFindRight<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', 'gzF', ':<C-u>MiniSurroundFindLeft<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', 'gzh', ':<C-u>MiniSurroundHighlight<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', 'gzr', ':<C-u>MiniSurroundReplace<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', 'gzn', ':<C-u>MiniSurroundUpdateConfig<CR>', { noremap = true, silent = true })
+
+-- mini.bufremove
+-- vim.api.nvim_set_keymap('n', '<leader>bd', ':Bdelete<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>bD', ':Bdelete!<CR>', { noremap = true, silent = true })
+
+-- mini.files
+-- vim.api.nvim_set_keymap('n', '<leader>ff', ':MiniFiles<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>fg', ':MiniGrep<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>fh', ':MiniHistory<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>fl', ':MiniLines<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>fm', ':MiniMarks<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>fn', ':MiniNotes<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>fr', ':MiniRegisters<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>fs', ':MiniSearch<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>ft', ':MiniTags<CR>', { noremap = true, silent = true })

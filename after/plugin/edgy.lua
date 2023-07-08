@@ -1,2 +1,0 @@
-vim.api.nvim_set_keymap('n', '<leader>ue', '<cmd>lua require("lazyvim.plugins.extras.ui.edgy").toggle()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>uE', '<cmd>lua require("lazyvim.plugins.extras.ui.edgy").select_window()<cr>', { noremap = true, silent = true })

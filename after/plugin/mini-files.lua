@@ -1,2 +1,0 @@
-vim.api.nvim_set_keymap('n', '<leader>fm', '<cmd>lua require("lazyvim.plugins.extras.editor.mini-files").open_mini_files("current")<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>fM', '<cmd>lua require("lazyvim.plugins.extras.editor.mini-files").open_mini_files("cwd")<cr>', { noremap = true, silent = true })

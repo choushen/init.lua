@@ -15,14 +15,10 @@ return require('packer').startup(function(use)
       "neovim/nvim-lspconfig",
   }
 
-  -- LSP Lines
-  use({
-    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-    config = function()
-      require("lsp_lines").setup()
-    end,
-  })
-
+    -- Nvim Surround
+    use {'echasnovski/mini.surround',
+    "echasnovski/mini.files",
+    "echasnovski/mini.bufremove",}
 
     -- Telescope
     use {

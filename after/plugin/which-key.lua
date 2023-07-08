@@ -76,13 +76,6 @@ local mappings = {
     -- ["cm"] = { "<cmd>Mason<cr>", "Run Mason" },
     -- ["bd"] = { "<cmd>Bdelete<cr>", "Delete buffer" },
     -- ["bD"] = { "<cmd>Bdelete!<cr>", "Delete all buffers" },
-    -- ["gza"] = { "<cmd>MiniSurroundAdd<cr>", "Add surround" },
-    -- ["gzd"] = { "<cmd>MiniSurroundDelete<cr>", "Delete surround" },
-    -- ["gzf"] = { "<cmd>MiniSurroundFindRight<cr>", "Find right surround" },
-    -- ["gzF"] = { "<cmd>MiniSurroundFindLeft<cr>", "Find left surround" },
-    -- ["gzh"] = { "<cmd>MiniSurroundHighlight<cr>", "Highlight surround" },
-    -- ["gzr"] = { "<cmd>MiniSurroundReplace<cr>", "Replace surround" },
-    -- ["gzn"] = { "<cmd>MiniSurroundUpdateConfig<cr>", "Update surround config" },
     -- ["fe"] = { "<cmd>NeoTreeFindFile<cr>", "Find file in file explorer" },
     -- ["fE"] = { "<cmd>NeoTreeFindFile<cr>", "Find file in file explorer" },
     -- ["e"] = { "<cmd>NeoTreeToggle<cr>", "Toggle file explorer" },
@@ -198,44 +191,6 @@ local mappings = {
     -- ["fp"] = { "<cmd>lua require('lazyvim.plugins.extras.util.project').projects()<cr>", "Open project list" },
     ["<leader>GS"] = {vim.cmd.Git, "Git"},
     ["<leader>UT"] = {vim.cmd.UndotreeToggle, "Undotree"},
-    b = {
-      name = "Bufferline",
-      p = { ":BufferLinePick<CR>", "Pick buffer" },
-      P = { ":BufferLineCloseBuffersRight<CR>", "Close all buffers to the right" },
-    },
-    c = {
-      name = "Mason",
-      m = { ":Mason<CR>", "Run Mason" },
-    },
-    -- e = {
-    --   name = "NvimTree",
-    --   ["<leader>"] = { ":NvimTreeFindFile<CR>", "Find file" },
-    --   ["<leader>e"] = { ":NvimTreeToggle<CR>", "Toggle NvimTree" },
-    -- },
-    f = {
-      name = "Flit",
-      f = { ":<C-u>Flit<CR>", "Flit forward" },
-      F = { ":<C-u>Flit!<CR>", "Flit backward" },
-      t = { ":<C-u>FlitTab<CR>", "Flit to new tab" },
-      T = { ":<C-u>FlitTab!<CR>", "Flit to new tab (split)" },
-    },
-    g = {
-      name = "Leap",
-      s = { ":Leap<CR>", "Leap forward" },
-      S = { ":LeapBack<CR>", "Leap backward" },
-      s = { ":LeapFromWindows<CR>", "Leap from windows" },
-    },
-    n = {
-      name = "Notify",
-      u = { ":NotifyClear<CR>", "Clear notifications" },
-    },
-    s = {
-      name = "Noice",
-      n = { ":NoiceLast<CR>", "Show last notification" },
-      h = { ":NoiceHistory<CR>", "Show notification history" },
-      a = { ":NoiceAll<CR>", "Show all notifications" },
-      d = { ":NoiceDismissAll<CR>", "Dismiss all notifications" },
-    },
     ["<C-Space>"] = {
       ":lua require('nvim-treesitter.selectors').increment_selection()<CR>",
       "Increment selection",
@@ -244,16 +199,14 @@ local mappings = {
       ":lua require('nvim-treesitter.selectors').decrement_selection()<CR>",
       "Decrement selection",
     },
-    q = {
-      name = "Persistence",
-      s = { ":lua require('persistence').load()<CR>", "Load session" },
-      l = { ":lua require('persistence').load_last()<CR>", "Load last session" },
-      d = { ":lua require('persistence').stop()<CR>", "Stop persistence" },
-    },
     b = {
-      name = "Mini",
-      d = { ":Bdelete<CR>", "Delete buffer" },
-      D = { ":Bdelete!<CR>", "Force delete buffer" },
+      name = "Bufferline",
+      p = { ":BufferLinePick<CR>", "Pick buffer" },
+      P = { ":BufferLineCloseBuffersRight<CR>", "Close all buffers to the right" },
+    },
+    c = {
+      name = "Mason",
+      m = { ":Mason<CR>", "Run Mason" },
     },
     x = {
       name = "Trouble",
@@ -264,16 +217,12 @@ local mappings = {
       q = { "<cmd>TroubleToggle quickfix<cr>", "Quickfix" },
       R = { "<cmd>TroubleToggle lsp_references<cr>", "LSP References" },
     },
-    z = {
-      name = "MiniSurround",
-      a = { ":<C-u>MiniSurroundAdd<CR>", "Add surround" },
-      d = { ":<C-u>MiniSurroundDelete<CR>", "Delete surround" },
-      f = { ":<C-u>MiniSurroundFindRight<CR>", "Find right surround" },
-      F = { ":<C-u>MiniSurroundFindLeft<CR>", "Find left surround" },
-      h = { ":<C-u>MiniSurroundHighlight<CR>", "Highlight surround" },
-      r = { ":<C-u>MiniSurroundReplace<CR>", "Replace surround" },
-      n = { ":<C-u>MiniSurroundUpdateConfig<CR>", "Update configuration" },
-    },
+    U = {name = "Undotree"},
+    G = {name = "Fugitive"},
+    w = {name = "Windows"},
+    f = {name = "Files"},
+    ['<Tab>'] = { name = "Tabs" },
+
   }
   
 -- Register your mappings with WhichKey

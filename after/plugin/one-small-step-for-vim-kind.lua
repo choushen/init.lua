@@ -1,2 +1,0 @@
-vim.api.nvim_set_keymap('n', '<leader>daL', '<cmd>lua require("ossv.nlua").start()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>dal', '<cmd>lua require("ossv.nlua").start()<cr>', { noremap = true, silent = true })
