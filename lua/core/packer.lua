@@ -9,11 +9,35 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Mason LSP
-    use {
-      "williamboman/mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
-      "neovim/nvim-lspconfig",
-  }
+  --   use {
+  --     "williamboman/mason.nvim",
+  --     "williamboman/mason-lspconfig.nvim",
+  --     "neovim/nvim-lspconfig",
+  -- }
+
+  -- LSP Zero
+  use {
+		'VonHeikemen/lsp-zero.nvim',
+		branch = 'v1.x',
+		requires = {
+			-- LSP Support
+			{'williamboman/mason.nvim'},
+			{'williamboman/mason-lspconfig.nvim'},
+			{'neovim/nvim-lspconfig'},
+
+			-- Autocompletion
+			{'hrsh7th/nvim-cmp'},
+			{'hrsh7th/cmp-buffer'},
+			{'hrsh7th/cmp-path'},
+			{'saadparwaiz1/cmp_luasnip'},
+			{'hrsh7th/cmp-nvim-lsp'},
+			{'hrsh7th/cmp-nvim-lua'},
+
+			-- Snippets
+			{'L3MON4D3/LuaSnip'},
+			{'rafamadriz/friendly-snippets'},
+		}
+	}
 
     -- Nvim Surround
     use {'echasnovski/mini.surround',

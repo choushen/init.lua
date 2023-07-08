@@ -3,6 +3,10 @@ vim.g.mapleader = " "
 -- while in normal mode, if i press leader key (space) followed by pv, vim.cmd.Ex will be executed
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+-- Move selected line / block of text in visual mode
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
 vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = true })
