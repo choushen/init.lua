@@ -17,6 +17,9 @@ return require('packer').startup(function(use)
         {'williamboman/mason.nvim'},
         {'williamboman/mason-lspconfig.nvim'},
         {'neovim/nvim-lspconfig'},
+        {'glepnir/lspsaga.nvim'},
+        {'jose-elias-alvarez/null-ls.nvim'},
+        {'onsails/lspkind-nvim'},
 
         -- Autocompletion
         {'hrsh7th/nvim-cmp'},
@@ -25,6 +28,8 @@ return require('packer').startup(function(use)
         {'saadparwaiz1/cmp_luasnip'},
         {'hrsh7th/cmp-nvim-lsp'},
         {'hrsh7th/cmp-nvim-lua'},
+        {'windwp/nvim-autopairs'},
+        {'windwp/nvim-ts-autotag'},
 
         -- Snippets
         {'L3MON4D3/LuaSnip'},
@@ -122,7 +127,10 @@ return require('packer').startup(function(use)
       },
     }
 
-    -- Theme
+    -- Toggleterm
+    use 'akinsho/toggleterm.nvim'
+
+      -- Theme
     use({
     'rose-pine/neovim',
     as = 'rose-pine',
