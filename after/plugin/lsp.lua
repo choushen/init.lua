@@ -1,78 +1,66 @@
-local lsp = require("lsp-zero")
+require('lspconfig').pyright.setup({})
 
-lsp.preset("recommended")
+require('compe').setup {
+    enabled = true;
+    autocomplete = true;
+    debug = false;
+    min_length = 1;
+    preselect = 'enable';
+    throttle_time = 80;
+    source_timeout = 200;
+    resolve_timeout = 800;
+    incomplete_delay = 400;
+    max_abbr_width = 100;
+    max_kind_width = 100;
+    max_menu_width = 100;
+    documentation = {
+      border = { '', '' ,'', ' ', '', '', '', ' ' }, -- the border option is the same as `|help nvim_open_win|`
+      winhighlight = "NormalFloat:CompeDocumentation,FloatBorder:CompeDocumentationBorder",
+      max_width = 120,
+      min_width = 60,
+      max_height = math.floor(vim.o.lines * 0.3),
+      min_height = 1,
+    };
+  
+    source = {
+      path = true;
+      buffer = true;
+      calc = true;
+      nvim_lsp = true;
+      nvim_lua = true;
+      vsnip = true;
+      ultisnips = true;
+      luasnip = true;
+    };
+  }
 
-lsp.ensure_installed({
-	'rust_analyzer',
-	'lua_ls',
-	'html',
-	'cucumber_language_server',
-	'cssls',
-	'jsonls',
-	'dockerls',
-	'eslint',
-	'opencl_ls',
-	'cmake',
-	'jdtls',
-	'omnisharp',
-	'cmake',
-	'sqlls',
-	'tsserver',
-	'yamlls',
-	'vimls',
-	'pylsp',
-	'tailwindcss',
-	'sqlls',
-})
-
--- Fix Undefined global 'vim'
-lsp.nvim_workspace()
-
-local cmp = require('cmp')
-local cmp_select = {behavior = cmp.SelectBehavior.Select}
-local cmp_mappings = lsp.defaults.cmp_mappings({
-  ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-  ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-  ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-  ["<C-Space>"] = cmp.mapping.complete(),
-})
-
-cmp_mappings['<Tab>'] = nil
-cmp_mappings['<S-Tab>'] = nil
-
-lsp.setup_nvim_cmp({
-  mapping = cmp_mappings
-})
-
-lsp.set_preferences({
-    suggest_lsp_servers = false,
-    sign_icons = {
-        error = 'E',
-        warn = 'W',
-        hint = 'H',
-        info = 'I'
-    }
-})
-
-
--- Defaults to vim keybinds if lsp doesn't have specfic keybind
-lsp.on_attach(function(client, bufnr)
-  local opts = {buffer = bufnr, remap = false}
-
-  vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
-  vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
-  vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
-  vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
-  vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
-  vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
-  vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
-  vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
-  vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
-  vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
-end)
-
-lsp.setup()
-
-vim.diagnostic.config({
-    virtual_text = true
-})
+  -- Plugin configurations
+-- require('telescope').setup()
+-- require('vsnip').setup()
+-- require('nvim-autopairs').setup({})
+-- require('surround').setup({})
+-- require('commentary').setup({})
+-- require('fugitive').setup({})
+-- require('dispatch').setup({})
+-- require('sleuth').setup({})
+-- require('abolish').setup({})
+-- require('endwise').setup({})
+-- require('eunuch').setup({})
+-- require('projectionist').setup({})
+-- require('scriptease').setup({})
+-- require('speeddating').setup({})
+-- require('vinegar').setup({})
+-- require('characterize').setup({})
+-- require('obsession').setup({})
+-- require('rsi').setup({})
+-- require('zenroom').setup({})
+-- require('zip').setup({})
+-- require('jdaddy').setup({})
+-- require('grammarous').setup({})
+-- require('liquid').setup({})
+-- require('ragtag').setup({})
+-- require('rails').setup({})
+-- require('bundler').setup({})
+-- require('rake').setup({})
+-- require('ruby').setup({})
+-- require('rvm').setup({})

@@ -1,50 +1,72 @@
+
 -- setting the leader key to space
 vim.g.mapleader = " "
 -- while in normal mode, if i press leader key (space) followed by pv, vim.cmd.Ex will be executed
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+-- Move selected line / block of text in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
-vim.keymap.set("n", "J", "mzJ`z")
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "n", "nzzzv") -- Keeps cursor in the middle when searching
-vim.keymap.set("n", "N", "Nzzzv") -- Keeps cursor in the middle when searching
+-- Keymaps for Visual Studio Code-like functionality
+vim.api.nvim_set_keymap('n', '<leader>f', '<cmd>Telescope find_files<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>g', '<cmd>Telescope live_grep<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>b', '<cmd>Telescope buffers<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>t', '<cmd>Telescope tags<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>r', '<cmd>Telescope oldfiles<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>e', '<cmd>NvimTreeToggle<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>h', '<cmd>noh<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>z', '<cmd>ZenMode<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>ws', '<cmd>w<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>wq', '<cmd>wq<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>qq', '<cmd>qall<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>o', '<cmd>Telescope marks<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>;', '<cmd>Telescope commands<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cd', '<cmd>lcd %:p:h<CR>:pwd<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cf', '<cmd>Telescope current_buffer_fuzzy_find<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>ca', '<cmd>Telescope lsp_code_actions<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cr', '<cmd>Telescope lsp_references<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>ci', '<cmd>Telescope lsp_implementations<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cd', '<cmd>Telescope lsp_definitions<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cs', '<cmd>Telescope lsp_document_symbols<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cf', '<cmd>Telescope lsp_workspace_symbols<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cc', '<cmd>Telescope lsp_document_diagnostics<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cw', '<cmd>Telescope lsp_workspace_diagnostics<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cl', '<cmd>Telescope lsp_document_code_actions<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cL', '<cmd>Telescope lsp_workspace_code_actions<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cp', '<cmd>Telescope lsp_document_symbols<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cP', '<cmd>Telescope lsp_workspace_symbols<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cm', '<cmd>Telescope lsp_implementations<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cn', '<cmd>Telescope lsp_definitions<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>ct', '<cmd>Telescope lsp_type_definitions<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cs', '<cmd>Telescope lsp_document_symbols<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cS', '<cmd>Telescope lsp_workspace_symbols<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>ca', '<cmd>Telescope lsp_code_actions<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cr', '<cmd>Telescope lsp_references<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>ci', '<cmd>Telescope lsp_implementations<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cd', '<cmd>Telescope lsp_definitions<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cs', '<cmd>Telescope lsp_document_symbols<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cf', '<cmd>Telescope lsp_workspace_symbols<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cc', '<cmd>Telescope lsp_document_diagnostics<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cw', '<cmd>Telescope lsp_workspace_diagnostics<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cl', '<cmd>Telescope lsp_document_code_actions<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cL', '<cmd>Telescope lsp_workspace_code_actions<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cp', '<cmd>Telescope lsp_document_symbols<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cP', '<cmd>Telescope lsp_workspace_symbols<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cm', '<cmd>Telescope lsp_implementations<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cn', '<cmd>Telescope lsp_definitions<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>ct', '<cmd>Telescope lsp_type_definitions<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cs', '<cmd>Telescope lsp_document_symbols<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>cS', '<cmd>Telescope lsp_workspace_symbols<CR>', { noremap = true, silent = true })
 
-vim.keymap.set("n", "<leader>vwm", function()
-    require("vim-with-me").StartVimWithMe()
-end)
-vim.keymap.set("n", "<leader>svwm", function()
-    require("vim-with-me").StopVimWithMe()
-end)
-
--- greatest remap ever
-vim.keymap.set("x", "<leader>p", [["_dP]])
-
--- next greatest remap ever : asbjornHaland
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
-
--- This is going to get me cancelled
-vim.keymap.set("i", "<C-c>", "<Esc>")
-
-vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
-
-vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
-vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
-vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
-
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
-
-vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
-vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
-
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
-end)
+-- Keymaps for LSP functionality
+vim.api.nvim_set_keymap('n', '<leader>msn', ':Mason<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>gr', '<cmd>lua vim.lsp.buf.references()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', { noremap = true, silent = true })
