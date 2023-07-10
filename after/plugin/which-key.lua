@@ -221,6 +221,10 @@ local mappings = {
     G = {name = "Fugitive"},
     w = {name = "Windows"},
     f = {name = "Files"},
+    
+    S = {name = "Surround",
+  
+    },
     ['<Tab>'] = { name = "Tabs" },
 
   }

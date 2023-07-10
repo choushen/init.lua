@@ -65,6 +65,30 @@ vim.api.nvim_set_keymap('n', '<leader><tab>]', ':tabnext<CR>', { noremap = true 
 vim.api.nvim_set_keymap('n', '<leader><tab>d', ':tabclose<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader><tab>[', ':tabprevious<CR>', { noremap = true })
 
+-- Nvim Surround
+-- Surround words
+-- vim.api.nvim_set_keymap('n', 'Sw', 'ysiW)', { noremap = true })
+-- -- Make function calls
+-- vim.api.nvim_set_keymap('n', 'Smf', 'yswf', { noremap = true })
+-- -- Delete function calls
+-- vim.api.nvim_set_keymap('n', 'Sdf', 'dsf', { noremap = true })
+-- -- Change function calls
+-- vim.api.nvim_set_keymap('n', 'Sdf', 'csf', { noremap = true })
+-- -- Make strings
+-- vim.api.nvim_set_keymap('n', 'Sms', 'ys"$', { noremap = true })
+-- -- Delete around me
+-- vim.api.nvim_set_keymap('n', 'Sd', 'ds]', { noremap = true })
+-- -- Change quotes
+-- vim.api.nvim_set_keymap('n', 'Sc', 'cs"', { noremap = true })
+-- -- Or tag types
+-- vim.api.nvim_set_keymap('n', 'So', 'csth1<CR>', { noremap = true })
+-- -- Add HTML tags
+-- vim.api.nvim_set_keymap('n', 'Shy', 'ysiw<em>', { noremap = true })
+-- -- Change HTML tags
+-- vim.api.nvim_set_keymap('n', 'Shc', 'cst', { noremap = true })
+-- -- Remove HTML tags
+-- vim.api.nvim_set_keymap('n', 'Shr', 'dst', { noremap = true })
+
 -- bufferline.nvim
 vim.api.nvim_set_keymap('n', '<leader>bp', ':BufferLinePick<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>bP', ':BufferLineCloseBuffersRight<CR>', { noremap = true, silent = true })
