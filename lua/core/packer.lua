@@ -128,7 +128,14 @@ return require('packer').startup(function(use)
     }
 
     -- Toggleterm
-    use 'akinsho/toggleterm.nvim'
+    use {'akinsho/toggleterm.nvim'}
+
+    -- Colorizer
+    use {'norcalli/nvim-colorizer.lua'}
+
+    -- Zen 
+    use {'folke/zen-mode.nvim'}
+    
 
       -- Theme
     use({

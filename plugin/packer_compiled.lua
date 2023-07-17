@@ -129,6 +129,16 @@ _G.packer_plugins = {
     path = "C:\\Users\\Jacob\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
+  ["lspkind-nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Jacob\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lspkind-nvim",
+    url = "https://github.com/onsails/lspkind-nvim"
+  },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Jacob\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lspsaga.nvim",
+    url = "https://github.com/glepnir/lspsaga.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "C:\\Users\\Jacob\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim",
@@ -149,10 +159,25 @@ _G.packer_plugins = {
     path = "C:\\Users\\Jacob\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nui.nvim",
     url = "https://github.com/MunifTanjim/nui.nvim"
   },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Jacob\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "C:\\Users\\Jacob\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "C:\\Users\\Jacob\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "C:\\Users\\Jacob\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-dap"] = {
     loaded = true,
@@ -185,6 +210,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Jacob\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "C:\\Users\\Jacob\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "C:\\Users\\Jacob\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
@@ -211,6 +241,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Jacob\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["toggleterm.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Jacob\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
+  },
   ["trouble.nvim"] = {
     loaded = true,
     path = "C:\\Users\\Jacob\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\trouble.nvim",
@@ -231,22 +266,27 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Jacob\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
+  },
+  ["zen-mode.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Jacob\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\zen-mode.nvim",
+    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-try_loadstring("\27LJ\2\nt\0\0\3\0\a\0\0156\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0", "config", "which-key.nvim")
-time([[Config for which-key.nvim]], false)
--- Config for: nvim-surround
-time([[Config for nvim-surround]], true)
-try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
-time([[Config for nvim-surround]], false)
 -- Config for: rose-pine
 time([[Config for rose-pine]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")
 time([[Config for rose-pine]], false)
+-- Config for: nvim-surround
+time([[Config for nvim-surround]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
+time([[Config for nvim-surround]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+try_loadstring("\27LJ\2\nt\0\0\3\0\a\0\0156\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0", "config", "which-key.nvim")
+time([[Config for which-key.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
