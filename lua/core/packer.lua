@@ -17,7 +17,6 @@ return require('packer').startup(function(use)
         {'williamboman/mason.nvim'},
         {'williamboman/mason-lspconfig.nvim'},
         {'neovim/nvim-lspconfig'},
-        {'glepnir/lspsaga.nvim'},
         {'jose-elias-alvarez/null-ls.nvim'},
         {'onsails/lspkind-nvim'},
 

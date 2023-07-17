@@ -1,7 +1,7 @@
 -- setting the leader key to space
 vim.g.mapleader = " "
 -- while in normal mode, if i press leader key (space) followed by pv, vim.cmd.Ex will be executed
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+--vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Move selected line / block of text in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -104,14 +104,22 @@ vim.api.nvim_set_keymap('n', '<leader>bP', ':BufferLineCloseBuffersRight<CR>', {
 -- vim.api.nvim_set_keymap('n', 'S', ':LeapBack<CR>', { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap('n', 'gs', ':LeapFromWindows<CR>', { noremap = true, silent = true })
 
+-- lsp saga
+-- vim.keymap.set('n', '<C-dj>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
+-- vim.keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts)
+-- vim.keymap.set('n', 'gd', '<Cmd>Lspsaga lsp_finder<CR>', opts)
+-- vim.keymap.set('i', '<C-dk>', '<Cmd>Lspsaga signature_help<CR>', opts)
+-- vim.keymap.set('n', 'gp', '<Cmd>Lspsaga preview_definition<CR>', opts)
+-- vim.keymap.set('n', 'gr', '<Cmd>Lspsaga rename<CR>', opts)
+
 -- mason.nvim
 vim.api.nvim_set_keymap('n', '<leader>cm', ':Mason<CR>', { noremap = true, silent = true })
 
--- neo-tree.nvim
--- vim.api.nvim_set_keymap('n', '<leader>fe', ':NvimTreeFindFile<CR>', { noremap = true, silent = true })
--- vim.api.nvim_set_keymap('n', '<leader>fE', ':NvimTreeFindFile<CR>', { noremap = true, silent = true })
--- vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
--- vim.api.nvim_set_keymap('n', '<leader>E', ':NvimTreeFindFileToggle<CR>', { noremap = true, silent = true })
+-- Nvim Tree
+vim.api.nvim_set_keymap('n', '<leader>fe', ':NvimTreeFindFile<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>fE', ':NvimTreeFindFile<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>E', ':NvimTreeFindFileToggle<CR>', { noremap = true, silent = true })
 
 -- noice.nvim
 -- vim.api.nvim_set_keymap('c', '<S-Enter>', ':NoiceRedirectCmdline<CR>', { noremap = true, silent = true })
