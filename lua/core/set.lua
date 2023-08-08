@@ -3,9 +3,9 @@
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
--- stest sadasd
-vim.o.shell = 'powershell'
 
+vim.o.shell = 'powershell'
+--vim.o.verbose = 2
 vim.opt.nu = true
 
 vim.opt.relativenumber = true
